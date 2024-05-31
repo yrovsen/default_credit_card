@@ -87,17 +87,23 @@ Several classification models are built to predict the likelihood of credit card
 
 ![image](https://github.com/yrovsen/default_credit_card/assets/137065696/405bf9cb-d342-4a16-b92d-4113c253cc04)
 
+
 ## Model Optimization
 
-Hyperparameters of the models are tuned using cross-validation techniques to achieve the best performance.
+Hyperparameters of the models are tuned using cross-validation techniques to achieve the best performance. Using optuna library, the models which has performed better has been tuned to get even more better results:
 
+![image](https://github.com/yrovsen/default_credit_card/assets/137065696/8f019e5d-4518-41d0-9383-3ebad2746c41)
+
+ 
 ## Stacking Classifier
 
-A stacking classifier is implemented to combine the predictions of multiple models and improve overall accuracy.
+A stacking classifier is implemented to combine the predictions of multiple models and improve overall accuracy. As base models, xgboost and lightgbm tuned models, and as a meta model, default tuned catboost model have been used for stacking. However, stacking classifier gini score was below than catboost optuna model which was chosen for univariate analysis as a final model.
 
 ## Univariate Analysis
 
-Univariate analysis is performed to understand the distribution and central tendency of individual features.
+Univariate analysis is performed to understand the distribution and central tendency of individual features. The features which have test gini score more than 20% and are not overfitting chosen for fitting.
+
+![image](https://github.com/yrovsen/default_credit_card/assets/137065696/8762920c-e317-4d5d-89d3-31d722d282e4)
 
 ## Results and Conclusion
 
