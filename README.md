@@ -109,7 +109,8 @@ Univariate analysis is performed to understand the distribution and central tend
 
 The models are evaluated based on various metrics, and the best-performing model is identified. The project demonstrates the effectiveness of combining multiple preprocessing and modeling techniques to improve classification accuracy. Regardless of the fact that all models had good results, catboost tuned model has been chosen and using univariate analysis, main features filtered accordingly. Here is ROC&AUC curve and precision-recall trade off curve:
 
-![image](https://github.com/yrovsen/default_credit_card/assets/137065696/66077329-0aab-441f-94f0-a7014d5f5ad6) ![image](https://github.com/yrovsen/default_credit_card/assets/137065696/2e2e40e2-5939-447d-81e1-71f8defab284)
+![image](https://github.com/yrovsen/default_credit_card/assets/137065696/66077329-0aab-441f-94f0-a7014d5f5ad6) 
+![image](https://github.com/yrovsen/default_credit_card/assets/137065696/2e2e40e2-5939-447d-81e1-71f8defab284)
 
 
 
