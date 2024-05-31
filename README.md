@@ -19,17 +19,21 @@ This project focuses on predicting credit card defaults using various classifica
 
 ## Data Import
 
-The dataset used in this project contains information on whether clients defaulted on their credit card payments. It consists of 30,000 rows and 24 features, along with 1 target column, which is the default column. We have checked the data in terms of statistics using the `describe` command.
+The dataset used in this project contains information on whether clients defaulted on their credit card payments. It consists of 30,000 rows and 24 features, along with 1 target column, which is the default column. We have checked the data in terms of statistics using the `describe` command. Finally, the meanings of each columns have been placed in the excel file (second sheet).
 
 ## Preprocessing Steps
 
 ### Outlier Treatment (Capping method)
 
-Outliers in the dataset are treated using the capping method to ensure they do not adversely affect the model performance.
+Outliers in the dataset were treated using the capping method. The interquartile range (IQR) was calculated for each numeric feature to determine the upper and lower boundaries. For each numeric column, if the values exceeded the upper boundary, they were capped at the upper boundary. Similarly, values below the lower boundary were capped at the lower boundary. This approach ensures that extreme values do not adversely affect the model performance.
 
 ### Feature Creation
 
-New features are created from the existing data to enhance the predictive power of the models.
+New features were created to enhance the predictive power of the model by leveraging the relationships between existing features. Specifically, statistical analysis was used to create new columns based on the relationships between `EDUCATION` and `LIMIT_BAL`, as well as `MARRIAGE` and `LIMIT_BAL`.
+
+For each category in `EDUCATION`, new columns were created to capture the mean, sum, minimum, and maximum values of `LIMIT_BAL`. This was done by grouping the data by `EDUCATION` and calculating these statistics, which were then merged back into the main dataset.
+
+Similarly, new columns were created for each category in `MARRIAGE`, capturing the mean, sum, minimum, and maximum values of `LIMIT_BAL` by grouping the data by `MARRIAGE` and performing the same statistical calculations. These new features provide additional insights into the relationships between these variables, which can improve the model's performance.
 
 ### Normal Distribution Checking
 
