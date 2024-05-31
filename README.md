@@ -65,11 +65,21 @@ This comprehensive approach ensures that the model effectively captures relevant
 
 ### WOE Transformation
 
-Weight of Evidence (WOE) transformation is applied to convert categorical variables into continuous variables, aiding in model performance.
+WOE transformation plays a crucial role in transforming categorical variables into a form that is more suitable for predictive modeling. Here's how it's implemented:
+
+**Numeric Values:**
+- Numerical features are binned based on quartiles (q1, q2, q3).
+- Each bin is assigned a category, and WOE values are calculated to capture the relationship between the feature and default status.
+- This transformation helps in identifying how each numerical feature contributes to predicting credit card defaults.
+
+**Categorical Values:**
+- Categorical features are grouped by their unique values.
+- WOE values are computed to quantify the predictive strength of each category in relation to credit card default.
+- Missing values and categories with sparse data are handled to ensure robust WOE transformation.
 
 ## Train Test Splitting
 
-The dataset is split into training and testing sets to evaluate the performance of the models.
+The dataset is split into training and testing sets to evaluate the performance of the models. Here I have taken 3 inputs depending on the models: Logistic Regression inputs, Catboost custom model inputs declaring categoric features, and inputs for other models.
 
 ## Model Building
 
