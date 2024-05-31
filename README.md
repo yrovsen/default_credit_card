@@ -83,7 +83,9 @@ The dataset is split into training and testing sets to evaluate the performance 
 
 ## Model Building
 
-Several classification models are built to predict the likelihood of credit card defaults, including logistic regression, decision trees, and random forests.
+Several classification models are built to predict the likelihood of credit card defaults, including logistic regression, decision trees, and random forests. Since the dataset is imbalanced, we have to look through gini probabilities, and result is here:
+
+![image](https://github.com/yrovsen/default_credit_card/assets/137065696/405bf9cb-d342-4a16-b92d-4113c253cc04)
 
 ## Model Optimization
 
