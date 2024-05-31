@@ -37,11 +37,31 @@ Similarly, new columns were created for each category in `MARRIAGE`, capturing t
 
 ### Normal Distribution Checking
 
-The distribution of the features is checked for normality to decide if any transformations are needed.
+The normal distribution of numeric columns was assessed using the Kolmogorov-Smirnov test (Smirnov test). This statistical test compares the distribution of each column against a normal distribution hypothesis.
+
+For each numeric column, the Kolmogorov-Smirnov test statistic (`kstest_statistic`) and its associated p-value (`kstest_p_value`) were computed. A p-value greater than 0.05 indicates that the data follows a normal distribution. Columns with p-values less than or equal to 0.05 were identified as not normally distributed.
+
+In cases where the data was not normally distributed, Spearman correlation was chosen instead of Pearson correlation for assessing relationships between variables. Spearman correlation is suitable for ordinal and non-normally distributed data, providing robustness against outliers and non-linear relationships.
+
+This approach ensures that appropriate statistical methods are used depending on the distribution characteristics of the data, thereby enhancing the reliability of the analysis.
 
 ### Correlation Check
 
-A correlation check is performed to identify and handle multicollinearity between features.
+In this project, two types of correlation analyses were conducted: target correlation and intercorrelation among features.
+
+**Target Correlation:** 
+Target correlation assesses the relationship between each feature and the target variable (`default` in this case). Features with an absolute correlation coefficient of 10% or higher with the target are considered to have a significant influence on predicting credit card defaults.
+
+**Intercorrelation Among Features:** 
+Intercorrelation examines relationships between pairs of features in the dataset. Features with intercorrelation coefficients of 80% or higher are considered highly correlated. Managing such high intercorrelation helps prevent multicollinearity, ensuring that the model remains robust and interpretable.
+
+**Variance Inflation Factor (VIF):**
+Additionally, VIF was used to detect multicollinearity among features. A VIF coefficient below 10 indicates that the variance of a feature is not significantly inflated by its correlations with other features. Features with high VIF scores were carefully reviewed or excluded from the model to enhance its stability and predictive accuracy.
+
+**Selected Columns for Analysis:** 
+Based on these analyses, several key features were chosen for further modeling and analysis. These columns strike a balance between their significant correlation with the target variable, moderate intercorrelation with other features, and low VIF scores, ensuring a robust and interpretable predictive model.
+
+This comprehensive approach ensures that the model effectively captures relevant relationships while mitigating issues related to multicollinearity.
 
 ### WOE Transformation
 
