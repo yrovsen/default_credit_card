@@ -111,13 +111,3 @@ The models are evaluated based on various metrics, and the best-performing model
 
 ![image](https://github.com/yrovsen/default_credit_card/assets/137065696/66077329-0aab-441f-94f0-a7014d5f5ad6) 
 ![image](https://github.com/yrovsen/default_credit_card/assets/137065696/2e2e40e2-5939-447d-81e1-71f8defab284)
-
-
-
-## About Me
-
-I am a data scientist with expertise in machine learning and data analysis. This project is a part of my portfolio showcasing my skills in building and optimizing classification models.
-
-Feel free to explore the project and reach out if you have any questions or suggestions!
-
-[Contact Me](mailto:your.email@example.com)
