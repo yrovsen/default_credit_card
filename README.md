@@ -19,7 +19,7 @@ This project focuses on predicting credit card defaults using various classifica
 
 ## Data Import
 
-The dataset used in this project is imported and loaded into a Pandas DataFrame for further processing and analysis.
+The dataset used in this project contains information on whether clients defaulted on their credit card payments. It consists of 30,000 rows and 24 features, along with 1 target column, which is the default column. We have checked the data in terms of statistics using the `describe` command.
 
 ## Preprocessing Steps
 
